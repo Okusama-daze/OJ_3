@@ -58,9 +58,8 @@ public class Grade {
         this.grade = grade;
         this.gpa = calGpa(grade);
     }
-    // After set the grade, update the GPA at the meantime.
 @Override
     public String toString(){
-    return "sid: "+student.getSid()+", cid: "+course.getCid()+", grade: "+this.grade+", gpa: "+this.gpa;
+        return String.format("sid: %d, cid: %d, grade: %.1f, gpa: %.2f",student.getSid(),course.getCid(),this.grade,this.gpa);
     }
 }
